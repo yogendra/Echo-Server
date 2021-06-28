@@ -10,5 +10,5 @@ FROM node:lts-alpine
 WORKDIR /app
 COPY --from=build /build/src/global.json .
 COPY --from=build /build/dist/webserver.js .
-
+USER 1000
 ENTRYPOINT [ "node", "webserver" ]
