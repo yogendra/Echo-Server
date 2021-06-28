@@ -1,9 +1,11 @@
 const http = require('http')
   , express = require('express')
+  , cors = require('cors')
   , app = express()
   , server = http.createServer(app)
   , bodyParser = require('body-parser');
 
+app.use(cors());
 // Configuration
 app.disable('x-powered-by');
 
